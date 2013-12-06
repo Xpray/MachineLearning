@@ -1,5 +1,5 @@
 /**
-*Ìİ¶ÈÏÂ½µ·¨ 
+*æ¢¯åº¦ä¸‹é™æ³• 
 *
 **/
 
@@ -10,14 +10,14 @@
 const int N = 3;
 const double rate = 0.001;
 const double err = 0.0000000001;
-int M;//Êµ¼ÊÑù±¾´óĞ¡ 
+int M;//å®é™…æ ·æœ¬å¤§å° 
 typedef struct
 {
 	double x0,x1,x2; //x0 = 1; h(x) = t0*x0 + t1*x1 + t2*x2;
-	double y;// ²âµÃµÄyÖµ 
+	double y;// æµ‹å¾—çš„yå€¼ 
 }node;
 
-node x[100];//Ñù±¾¼¯
+node x[100];//æ ·æœ¬é›†
 
 double theta[N] = {0,0,0};//t0,t1,t2
 
@@ -25,7 +25,7 @@ void init()
 {
 	double x1,x2,y;
 	FILE *f = fopen("data.txt","r");
-	fscanf(f,"%d",&M);//Ñù±¾ÊıÄ¿
+	fscanf(f,"%d",&M);//æ ·æœ¬æ•°ç›®
 	for(int i = 0; i < M; i++){
 		fscanf(f,"%lf %lf %lf",&x1,&x2,&y);
 		x[i].x0 = 1;
